@@ -67,7 +67,7 @@ fun TodoListPage(viewModel: TodoViewModel){
 
         todoList?.let {
             LazyColumn {
-                itemsIndexed(it) { index, item ->
+                itemsIndexed(it) { _, item ->
                     TodoItem(item = item, onDelete = {
                         viewModel.deleteTodo(item.id)
                     })
